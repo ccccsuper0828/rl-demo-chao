@@ -1,0 +1,26 @@
+#!/bin/bash
+# 完全回退到 v6.1 配置
+# 只有在 v6.3 修复也失败时使用
+
+echo "⚠️  警告：将回退所有 v6.2/v6.3 改动"
+echo ""
+echo "需要手动操作："
+echo ""
+echo "1. agent/dqn_model.py:"
+echo "   - 移除所有 dropout 层和参数"
+echo "   - 恢复 v6.1 的 forward() 方法"
+echo ""
+echo "2. game/dino_game.py:"
+echo "   - 移除 curriculum_learning 相关代码"
+echo "   - 恢复 v6.1 的 __init__() 和 reset()"
+echo "   - 确认 _calculate_reward() 已是简单版本"
+echo ""
+echo "3. train.py:"
+echo "   - 移除 curriculum_learning 参数"
+echo "   - 移除 game.set_episode() 调用"
+echo ""
+echo "或者从 git 恢复（如果你使用了版本控制）："
+echo "   git checkout v6.1 -- agent/dqn_model.py game/dino_game.py train.py"
+echo ""
+echo "然后运行："
+echo "   python train.py --episodes 1000"
