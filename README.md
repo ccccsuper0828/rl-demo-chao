@@ -3,30 +3,6 @@
 ## CDS524 Assignment 1 - Reinforcement Learning Game Design
 
 A platformer game where an AI agent learns to play using Deep Q-Learning, inspired by Chrome's Dinosaur Game.
-
----
-
-## Project Structure
-
-```
-Assignment1_RL_Game/
-├── game/
-│   ├── __init__.py
-│   ├── dino_game.py       # Game environment (Pygame)
-│   └── constants.py       # Game constants
-├── agent/
-│   ├── __init__.py
-│   ├── dqn_model.py       # Deep Q-Network (PyTorch)
-│   ├── agent.py           # DQN Agent
-│   └── replay_buffer.py   # Experience Replay
-├── model/                 # Saved models
-├── train.py               # Training script
-├── play.py                # Play with AI or human
-├── DinoJump_QLearning.ipynb  # Jupyter notebook
-├── requirements.txt
-└── README.md
-```
-
 ---
 
 ## Installation
@@ -104,11 +80,6 @@ python play.py --mode compare
 
 ## Q-Learning Implementation
 
-### DQN Architecture
-```
-Input (8) → FC(256) → ReLU → FC(128) → ReLU → FC(64) → ReLU → Output (3)
-```
-
 ### Hyperparameters
 | Parameter | Value |
 |-----------|-------|
@@ -135,15 +106,5 @@ Input (8) → FC(256) → ReLU → FC(128) → ReLU → FC(64) → ReLU → Outp
 3. [DQN Flappy Bird](https://github.com/drl-dql/DQN-Flappy-Bird)
 4. [DinoAI](https://github.com/thomas-mauran/DinoAI)
 
----
 
-## Deliverables Checklist
-
-- [ ] Google Colab / Jupyter Notebook with code
-- [ ] Written report (1000-1500 words)
-- [ ] GitHub repository
-- [ ] YouTube demo video
-- [ ] All files in "Assignment 1 - [Your Name]" folder
-
-**Deadline:** March 3, 2026, 8:00 PM
 # rl-demo-chao
